@@ -1,249 +1,245 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#cb0716" />
-  <meta name="description" content="BabyBath ($BATH) — Every legend starts with a bath. The cleanest meme on Solana." />
-
-  <meta property="og:title" content="BabyBath ($BATH)" />
-  <meta property="og:description" content="Every legend starts with a bath." />
-  <meta property="og:image" content="assets/babybath-art.png" />
-  <meta property="og:type" content="website" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090000">
+  <meta name="description" content="BabyBath ($BATH) — Every legend starts with a bath. A Solana community meme coin.">
+  <meta property="og:title" content="BabyBath ($BATH)">
+  <meta property="og:description" content="Every legend starts with a bath.">
+  <meta property="og:image" content="assets/babybath-hero.png">
+  <meta property="og:type" content="website">
   <title>BabyBath ($BATH) — Solana</title>
-  <link rel="icon" href="assets/babybath-art.png" />
+  <link rel="icon" type="image/png" href="assets/babybath-coin.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="bubble-field" aria-hidden="true">
-    <i style="--x:4%;--s:46px;--d:13s;--delay:-3s"></i>
-    <i style="--x:14%;--s:22px;--d:10s;--delay:-7s"></i>
-    <i style="--x:27%;--s:72px;--d:17s;--delay:-5s"></i>
-    <i style="--x:43%;--s:30px;--d:11s;--delay:-2s"></i>
-    <i style="--x:58%;--s:54px;--d:15s;--delay:-9s"></i>
-    <i style="--x:69%;--s:18px;--d:9s;--delay:-4s"></i>
-    <i style="--x:82%;--s:64px;--d:18s;--delay:-11s"></i>
-    <i style="--x:94%;--s:34px;--d:12s;--delay:-6s"></i>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="bubble-layer" aria-hidden="true">
+    <span style="--x:3%;--s:32px;--d:14s;--delay:-4s"></span>
+    <span style="--x:10%;--s:74px;--d:22s;--delay:-11s"></span>
+    <span style="--x:19%;--s:21px;--d:12s;--delay:-6s"></span>
+    <span style="--x:30%;--s:48px;--d:18s;--delay:-13s"></span>
+    <span style="--x:40%;--s:26px;--d:14s;--delay:-2s"></span>
+    <span style="--x:52%;--s:68px;--d:23s;--delay:-9s"></span>
+    <span style="--x:62%;--s:38px;--d:16s;--delay:-7s"></span>
+    <span style="--x:73%;--s:82px;--d:24s;--delay:-15s"></span>
+    <span style="--x:82%;--s:25px;--d:13s;--delay:-3s"></span>
+    <span style="--x:92%;--s:52px;--d:19s;--delay:-10s"></span>
+    <span style="--x:97%;--s:17px;--d:11s;--delay:-8s"></span>
   </div>
 
-  <header class="nav-shell">
-    <div class="nav">
-      <a class="brand" href="#top">
-        <span class="brand-icon">🛁</span>
-        <span>BabyBath</span>
-        <b>$BATH</b>
-      </a>
+  <header class="site-header">
+    <a class="logo-lockup" href="#home" aria-label="BabyBath home">
+      <img src="assets/babybath-coin.png" alt="BabyBath coin logo">
+      <span>BabyBath</span>
+    </a>
 
-      <nav aria-label="Main navigation">
-        <a href="#story">Story</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#buy">How to buy</a>
-      </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
 
-      <div class="nav-actions">
-        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" title="Play or pause soundtrack">
-          <span id="sound-icon">♪</span>
-          <span id="sound-label">Sound</span>
-        </button>
-        <a class="btn btn-mini" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener noreferrer">Join</a>
-      </div>
+    <nav id="main-nav">
+      <a href="#home">Home</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#buy">How to buy</a>
+      <a href="#faq">FAQ</a>
+      <a href="#community">Community</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-button" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener" aria-label="Telegram">➤</a>
+      <a class="icon-button" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+      <button class="icon-button music" id="music-toggle" type="button" aria-label="Play or pause music">♫</button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy reveal">
-        <div class="badge">THE CLEANEST MEME ON SOLANA</div>
-        <h1>
-          Every legend<br>
-          starts with<br>
-          <span>a bath.</span>
-        </h1>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
 
-        <p class="hero-sub">
-          A legendary meme. A clean Solana launch. A community ready to make waves.
-          Welcome to <strong>BabyBath ($BATH)</strong>.
+      <div class="hero-copy reveal">
+        <p class="eyebrow">THE CLEANEST COMMUNITY ON SOLANA</p>
+        <h1><span>BabyBath</span><strong>$BATH</strong></h1>
+        <h2>Every legend starts with a bath</h2>
+        <p class="hero-description">
+          No fake promises. No complicated utility. Just strong branding, transparent launch details,
+          clean memes and a community ready to make waves.
         </p>
 
-        <div class="hero-actions">
-          <a class="btn" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener noreferrer">Join Telegram</a>
-          <a class="btn btn-black" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener noreferrer">Follow on X</a>
-          <span class="btn btn-muted">Buy at launch</span>
-        </div>
-
-        <div class="ca-box">
-          <div>
-            <small>OFFICIAL CONTRACT</small>
-            <strong id="contract">COMING AT LAUNCH</strong>
-          </div>
-          <button id="copy-ca" type="button" disabled>Copy</button>
-        </div>
-
-        <div class="trust-row">
-          <span>✓ Fixed supply</span>
-          <span>✓ Mint revoked after launch</span>
-          <span>✓ Freeze revoked after launch</span>
+        <div class="cta-grid">
+          <button class="neon-button primary disabled" type="button" aria-disabled="true">
+            <span>🚀</span> Buy on Raydium <small>COMING SOON</small>
+          </button>
+          <button class="neon-button disabled" type="button" aria-disabled="true">
+            <span>▥</span> View chart <small>COMING SOON</small>
+          </button>
+          <a class="neon-button" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener">
+            <span>➤</span> Join Telegram
+          </a>
+          <a class="neon-button" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener">
+            <span>𝕏</span> Follow on X
+          </a>
         </div>
       </div>
 
-      <div class="hero-visual reveal">
-        <div class="sunburst"></div>
-        <div class="art-frame">
-          <img src="assets/babybath-art.png" alt="BabyBath meme artwork">
-          <span class="sticker sticker-one">NO RUGS<br>JUST BUBBLES</span>
-          <span class="sticker sticker-two">SOLANA<br>MEME</span>
-        </div>
-        <span class="duck duck-one">🦆</span>
-        <span class="duck duck-two">🦆</span>
+      <div class="hero-art reveal">
+        <img class="hero-scene" src="assets/babybath-hero.png" alt="BabyBath mascot bathing a baby">
+        <img class="coin-float" src="assets/babybath-coin.png" alt="BabyBath coin emblem">
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>🫧 CLEAN CHARTS ONLY</span>
-        <span>🛁 EVERY LEGEND STARTS WITH A BATH</span>
-        <span>🦆 COMMUNITY FIRST</span>
-        <span>🚀 BATH TIME → LAMBO TIME</span>
-        <span>🫧 CLEAN CHARTS ONLY</span>
-        <span>🛁 EVERY LEGEND STARTS WITH A BATH</span>
-        <span>🦆 COMMUNITY FIRST</span>
-        <span>🚀 BATH TIME → LAMBO TIME</span>
-      </div>
-    </div>
+    <section class="status-strip reveal" aria-label="Project status">
+      <article>
+        <span class="status-icon">🪙</span>
+        <div><small>Total supply</small><strong>1,000,000,000</strong><em>$BATH planned</em></div>
+      </article>
+      <article>
+        <span class="status-icon">🔥</span>
+        <div><small>Mint authority</small><strong class="pending">Pending</strong><em>Revoked after verification</em></div>
+      </article>
+      <article>
+        <span class="status-icon">🔒</span>
+        <div><small>Freeze authority</small><strong class="pending">Pending</strong><em>Revoked after verification</em></div>
+      </article>
+      <article>
+        <span class="status-icon">💧</span>
+        <div><small>Liquidity</small><strong class="pending">Not live</strong><em>Status published at launch</em></div>
+      </article>
+      <article>
+        <span class="status-icon">◎</span>
+        <div><small>Network</small><strong>Solana</strong><em>Standard SPL token</em></div>
+      </article>
+    </section>
 
-    <section class="section story" id="story">
-      <div class="section-title reveal">
-        <div class="badge">THE STORY</div>
-        <h2>Born small.<br><span>Built legendary.</span></h2>
-      </div>
+    <section class="dashboard-grid">
+      <article class="panel about reveal">
+        <div class="panel-heading"><span>🦆</span><h3>About BabyBath</h3></div>
+        <p class="large-copy">Legends aren't born. They're bathed.</p>
+        <p>
+          BabyBath is an original Solana meme brand built around clean charts, playful artwork and
+          an honest launch. The official contract will only be published simultaneously on this
+          website, Telegram and X.
+        </p>
+        <a class="small-neon" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener">Join the community</a>
+        <div class="duck-art">🦆</div>
+      </article>
 
-      <div class="story-grid">
-        <article class="story-copy reveal">
-          <p class="lead">
-            Every icon has an origin story. BabyBath is about the moment before greatness:
-            the beginning, the bubbles, and the belief that something tiny can grow into a legend.
-          </p>
-          <p>
-            No complicated fake utility. No promises of guaranteed profit. Just a memorable meme,
-            transparent launch information and a community with a sense of humor.
-          </p>
-          <div class="quote">“Freshly washed. Ready for the moon.”</div>
-        </article>
+      <article class="panel token-panel reveal" id="tokenomics">
+        <div class="panel-heading"><span>🫧</span><h3>Tokenomics</h3></div>
+        <dl>
+          <div><dt>Total supply</dt><dd>1,000,000,000 BATH</dd></div>
+          <div><dt>Decimals</dt><dd>6</dd></div>
+          <div><dt>Buy tax</dt><dd>0% planned</dd></div>
+          <div><dt>Sell tax</dt><dd>0% planned</dd></div>
+          <div><dt>Mint authority</dt><dd>Revoke after checks</dd></div>
+          <div><dt>Freeze authority</dt><dd>Revoke after checks</dd></div>
+          <div><dt>Liquidity</dt><dd>Published at launch</dd></div>
+        </dl>
+        <p class="fine-print">All on-chain status claims will be updated only after they are verifiably completed.</p>
+      </article>
 
-        <div class="meme-card reveal">
-          <div class="meme-top">BABYBATH KNOWLEDGE</div>
-          <div class="meme-body">
-            <div class="meme-line"><span>🧼</span><b>Soap removes dirt.</b></div>
-            <div class="meme-line"><span>🫧</span><b>Bubbles remove bears.</b></div>
-            <div class="meme-line"><span>🛁</span><b>$BATH creates legends.</b></div>
-          </div>
+      <article class="panel roadmap reveal" id="roadmap">
+        <div class="panel-heading"><span>🦆</span><h3>Roadmap</h3></div>
+        <ol>
+          <li class="active"><b>01</b><div><strong>Born</strong><span>Brand, website and community</span></div></li>
+          <li><b>02</b><div><strong>Splash</strong><span>Token mint and authority verification</span></div></li>
+          <li><b>03</b><div><strong>Grow</strong><span>Raydium liquidity and DexScreener</span></div></li>
+          <li><b>04</b><div><strong>Moon</strong><span>Memes, partnerships and community growth</span></div></li>
+        </ol>
+      </article>
+
+      <article class="panel contract reveal">
+        <div class="panel-heading"><span>🔐</span><h3>Contract</h3></div>
+        <p>The official $BATH contract address will appear here after the token has been created and verified.</p>
+        <div class="contract-box">
+          <code id="contract-address">COMING SOON</code>
+          <button id="copy-contract" type="button" disabled aria-label="Copy contract address">⧉</button>
         </div>
-      </div>
+        <div class="contract-actions">
+          <span class="small-neon muted">View on Solscan</span>
+          <span class="small-neon muted">Add to Phantom</span>
+        </div>
+      </article>
     </section>
 
-    <section class="section tokenomics" id="tokenomics">
-      <div class="section-title reveal">
-        <div class="badge">TOKENOMICS</div>
-        <h2>Simple enough<br><span>to stay clean.</span></h2>
+    <section class="feature-section" id="buy">
+      <div class="section-copy reveal">
+        <p class="eyebrow">HOW TO BUY</p>
+        <h2>Get in the bath<br><span>in four clean steps.</span></h2>
       </div>
-
-      <div class="token-grid">
-        <article class="token-card red reveal">
-          <div class="token-number">1B</div>
-          <h3>Total supply</h3>
-          <p>1,000,000,000 $BATH</p>
-        </article>
-        <article class="token-card blue reveal">
-          <div class="token-number">0%</div>
-          <h3>Buy / sell tax</h3>
-          <p>No transfer tax planned</p>
-        </article>
-        <article class="token-card yellow reveal">
-          <div class="token-number">✓</div>
-          <h3>Authorities</h3>
-          <p>Mint and freeze revoked after creation</p>
-        </article>
-        <article class="token-card white reveal">
-          <div class="token-number">🔒</div>
-          <h3>Liquidity</h3>
-          <p>Lock status published after launch</p>
-        </article>
-      </div>
-
-      <p class="honesty-note reveal">
-        On-chain claims must only be displayed as completed after they are verifiably completed.
-      </p>
-    </section>
-
-    <section class="section buy" id="buy">
-      <div class="section-title reveal">
-        <div class="badge">HOW TO BUY</div>
-        <h2>Get in the bath<br><span>in three steps.</span></h2>
-      </div>
-
       <div class="steps">
-        <article class="step reveal">
-          <div class="step-num">01</div>
-          <div class="step-icon">👻</div>
-          <h3>Open Phantom</h3>
-          <p>Create a Solana wallet and fund it with a small amount of SOL.</p>
+        <article class="step-card reveal">
+          <b>01</b><span>👻</span><h3>Open Phantom</h3>
+          <p>Create a Solana wallet and fund it with SOL.</p>
         </article>
-        <article class="step reveal">
-          <div class="step-num">02</div>
-          <div class="step-icon">📋</div>
-          <h3>Verify the contract</h3>
-          <p>Use only the contract shown on this site, X and the official Telegram.</p>
+        <article class="step-card reveal">
+          <b>02</b><span>📋</span><h3>Copy the CA</h3>
+          <p>Use only the address published on all official channels.</p>
         </article>
-        <article class="step reveal">
-          <div class="step-num">03</div>
-          <div class="step-icon">🔄</div>
-          <h3>Swap on Raydium</h3>
-          <p>Connect Phantom, paste the verified address and swap SOL for $BATH.</p>
+        <article class="step-card reveal">
+          <b>03</b><span>🔁</span><h3>Swap</h3>
+          <p>Trade SOL for BATH through Raydium, Phantom or a supported bot.</p>
         </article>
-      </div>
-
-      <div class="launch-buttons reveal">
-        <span class="btn btn-muted">Raydium — coming soon</span>
-        <span class="btn btn-muted">DexScreener — coming soon</span>
+        <article class="step-card reveal">
+          <b>04</b><span>🛁</span><h3>Join the bath</h3>
+          <p>Follow Telegram and X for verified announcements.</p>
+        </article>
       </div>
     </section>
 
-    <section class="community reveal">
+    <section class="faq-section" id="faq">
+      <div class="section-copy reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Keep it clean.<br><span>Verify everything.</span></h2>
+      </div>
+      <div class="faq-list">
+        <details class="reveal">
+          <summary>Where will people buy BATH?</summary>
+          <p>The first liquidity pool is planned for Raydium. Users may also access the same liquidity through compatible wallets, aggregators and Telegram trading bots.</p>
+        </details>
+        <details class="reveal">
+          <summary>Is the token live already?</summary>
+          <p>No. The contract address, Raydium link and chart will remain marked “coming soon” until the actual token and pool have been created and verified.</p>
+        </details>
+        <details class="reveal">
+          <summary>Can more BATH be minted?</summary>
+          <p>The plan is to mint the complete fixed supply, check all token details, and then permanently revoke the mint authority.</p>
+        </details>
+        <details class="reveal">
+          <summary>Will liquidity be locked?</summary>
+          <p>The exact liquidity arrangement and verifiable proof will be published at launch. The website will not claim that liquidity is locked before this is completed.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="community-section reveal" id="community">
+      <img src="assets/babybath-coin.png" alt="" class="community-coin">
       <div>
-        <div class="badge inverse">JOIN THE BATH</div>
-        <h2>Clean memes.<br>Chaotic energy.</h2>
-        <p>Follow the only official accounts and watch out for impersonators.</p>
+        <p class="eyebrow">JOIN THE BATH</p>
+        <h2>Clean vibes.<br><span>Strong community.</span></h2>
+        <p>Official updates, launch information and contract verification will be posted on Telegram and X.</p>
       </div>
-      <div class="community-buttons">
-        <a class="btn btn-white" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a class="btn btn-black" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener noreferrer">@BabyBathSOL</a>
+      <div class="community-links">
+        <a class="neon-button primary" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener">➤ Telegram</a>
+        <a class="neon-button" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener">𝕏 @BabyBathSOL</a>
       </div>
-      <div class="giant-duck" aria-hidden="true">🦆</div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand">
-      <b>BabyBath ($BATH)</b>
-      <span>Every legend starts with a bath.</span>
-    </div>
-    <p>
-      $BATH is a meme token. It offers no guarantee of financial return or intrinsic value.
-      Crypto assets are highly risky. Verify every address and never risk money you cannot afford to lose.
-    </p>
+    <div class="footer-logo"><img src="assets/babybath-coin.png" alt=""><strong>BabyBath $BATH</strong></div>
+    <p>$BATH is a meme token. Crypto assets are highly risky and offer no guarantee of financial return. Verify every contract address and never risk money you cannot afford to lose.</p>
     <span>© 2026 BabyBath</span>
   </footer>
 
   <audio id="site-audio" loop preload="none">
     <source src="assets/audio/que-fue.mp3" type="audio/mpeg">
   </audio>
-
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,26 +1,34 @@
-# BabyBath Premium Website
+# BabyBath Final Website
 
-## Preview locally
-Open `index.html` in a browser.
+This is the launch-ready static website for BabyBath ($BATH).
 
-## Publish
-Upload this entire folder to Netlify Drop, Vercel, or another static host.
+## Files
+- `index.html`
+- `styles.css`
+- `script.js`
+- `assets/babybath-coin.png`
+- `assets/babybath-hero.png`
 
-## Add the “Qué Fue” soundtrack
-Place a legally obtained/licensed MP3 at:
+## Upload to GitHub
+Replace the existing website files in the root of your `babybath-website` repository with the contents of this folder. Commit the changes. Netlify will redeploy automatically.
+
+## Add the soundtrack
+Place a legally obtained or licensed MP3 at:
 
 `assets/audio/que-fue.mp3`
 
-Browsers block autoplay with sound, so visitors must press the Sound button. This is intentional and works better on mobile.
+Browsers require a user click before playing audio, so the music button intentionally starts playback only after being pressed.
 
-## Launch-day edits
-In `index.html`:
+## Launch-day changes
+Search `index.html` for `COMING SOON`, then:
 
-1. Replace `COMING AT LAUNCH` with the real contract address.
-2. Remove `disabled` from the contract Copy button.
-3. Replace the Raydium and DexScreener placeholder `<span>` elements with real `<a>` links.
-4. Only claim that mint/freeze authorities are revoked and liquidity is locked after each action is actually completed and verifiable on-chain.
+1. Replace the contract address.
+2. Remove `disabled` from the copy button.
+3. Replace disabled Raydium/chart elements with real `<a>` links.
+4. Change authority status from `Pending` only after revocation is confirmed on-chain.
+5. Change liquidity status only after the actual arrangement is completed and verifiable.
 
-## Official social links
-- X: https://x.com/BabyBathSOL
+## Official links
+- Website: https://babybathsol.xyz
 - Telegram: https://t.me/BabyBathSOL
+- X: https://x.com/BabyBathSOL

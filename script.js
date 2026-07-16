@@ -1,57 +1,64 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('main-nav');
 
-const audio = document.getElementById('site-audio');
-const soundToggle = document.getElementById('sound-toggle');
-const soundIcon = document.getElementById('sound-icon');
-const soundLabel = document.getElementById('sound-label');
-
-soundToggle?.addEventListener('click', async () => {
-  if (!audio) return;
-  try {
-    if (audio.paused) {
-      await audio.play();
-      soundToggle.classList.add('playing');
-      soundToggle.setAttribute('aria-pressed', 'true');
-      soundIcon.textContent = '❚❚';
-      soundLabel.textContent = 'Pause';
-    } else {
-      audio.pause();
-      soundToggle.classList.remove('playing');
-      soundToggle.setAttribute('aria-pressed', 'false');
-      soundIcon.textContent = '♪';
-      soundLabel.textContent = 'Sound';
-    }
-  } catch (error) {
-    soundLabel.textContent = 'Add MP3';
-    console.warn('Add your licensed MP3 at assets/audio/que-fue.mp3');
-  }
+menuToggle?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
 });
 
-audio?.addEventListener('error', () => {
-  soundLabel.textContent = 'Add MP3';
+nav?.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  });
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-const copyButton = document.getElementById('copy-ca');
-const contract = document.getElementById('contract');
+const audio = document.getElementById('site-audio');
+const musicToggle = document.getElementById('music-toggle');
+
+musicToggle?.addEventListener('click', async () => {
+  try {
+    if (audio.paused) {
+      await audio.play();
+      musicToggle.classList.add('playing');
+      musicToggle.textContent = '❚❚';
+    } else {
+      audio.pause();
+      musicToggle.classList.remove('playing');
+      musicToggle.textContent = '♫';
+    }
+  } catch (error) {
+    musicToggle.textContent = '!';
+    musicToggle.title = 'Add your licensed MP3 at assets/audio/que-fue.mp3';
+  }
+});
+
+audio?.addEventListener('error', () => {
+  musicToggle.title = 'Add your licensed MP3 at assets/audio/que-fue.mp3';
+});
+
+const copyButton = document.getElementById('copy-contract');
+const contract = document.getElementById('contract-address');
 
 copyButton?.addEventListener('click', async () => {
-  const value = contract?.textContent?.trim();
-  if (!value || value === 'COMING AT LAUNCH') return;
+  const address = contract.textContent.trim();
+  if (!address || address === 'COMING SOON') return;
   try {
-    await navigator.clipboard.writeText(value);
-    copyButton.textContent = 'Copied!';
-    setTimeout(() => copyButton.textContent = 'Copy', 1300);
+    await navigator.clipboard.writeText(address);
+    copyButton.textContent = '✓';
+    setTimeout(() => copyButton.textContent = '⧉', 1200);
   } catch {
-    copyButton.textContent = 'Failed';
+    copyButton.textContent = '!';
   }
 });
