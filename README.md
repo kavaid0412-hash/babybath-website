@@ -1,34 +1,28 @@
-# BabyBath Final Website
+# BabyBath Launch Website
 
-This is the launch-ready static website for BabyBath ($BATH).
+This version includes:
 
-## Files
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/babybath-coin.png`
-- `assets/babybath-hero.png`
+- Correct X link: https://x.com/BabyBathSOL_
+- Animated floating bubbles
+- Bubble cursor trail and click-pop effects
+- Interactive Bath Mode
+- Loading screen
+- Meme gallery
+- Launch command center
+- Responsive mobile navigation
+- Telegram and X links
+- Contract/Raydium/DexScreener placeholders
+- Music button linked to the uploaded MP3 filename
 
-## Upload to GitHub
-Replace the existing website files in the root of your `babybath-website` repository with the contents of this folder. Commit the changes. Netlify will redeploy automatically.
+## Deploy
 
-## Add the soundtrack
-Place a legally obtained or licensed MP3 at:
+Upload every file and folder from this package to the root of your GitHub repository and commit directly to `main`. Netlify will deploy automatically.
 
-`assets/audio/que-fue.mp3`
+## Launch-day checklist
 
-Browsers require a user click before playing audio, so the music button intentionally starts playback only after being pressed.
-
-## Launch-day changes
-Search `index.html` for `COMING SOON`, then:
-
-1. Replace the contract address.
-2. Remove `disabled` from the copy button.
-3. Replace disabled Raydium/chart elements with real `<a>` links.
-4. Change authority status from `Pending` only after revocation is confirmed on-chain.
-5. Change liquidity status only after the actual arrangement is completed and verifiable.
-
-## Official links
-- Website: https://babybathsol.xyz
-- Telegram: https://t.me/BabyBathSOL
-- X: https://x.com/BabyBathSOL
+1. Replace `COMING SOON` with the real contract address.
+2. Enable the copy button.
+3. Replace disabled Raydium and chart buttons with verified links.
+4. Update mint/freeze authority labels only after revocation is confirmed.
+5. Publish the exact liquidity arrangement and proof.
+6. Add Solscan and DexScreener links.

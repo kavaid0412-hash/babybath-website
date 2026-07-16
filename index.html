@@ -17,6 +17,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="site-loader" id="site-loader">
+    <img src="assets/babybath-coin.png" alt="">
+    <strong>FILLING THE BATH...</strong>
+    <div class="loader-bar"><i></i></div>
+  </div>
+  <div class="cursor-bubbles" id="cursor-bubbles" aria-hidden="true"></div>
+  <div class="toast" id="site-toast" role="status" aria-live="polite"></div>
   <div class="noise" aria-hidden="true"></div>
   <div class="bubble-layer" aria-hidden="true">
     <span style="--x:3%;--s:32px;--d:14s;--delay:-4s"></span>
@@ -47,14 +54,16 @@
       <a href="#tokenomics">Tokenomics</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#buy">How to buy</a>
+      <a href="#memes">Memes</a>
       <a href="#faq">FAQ</a>
       <a href="#community">Community</a>
     </nav>
 
     <div class="header-actions">
       <a class="icon-button" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener" aria-label="Telegram">➤</a>
-      <a class="icon-button" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener" aria-label="X">𝕏</a>
+      <a class="icon-button" href="https://x.com/BabyBathSOL_" target="_blank" rel="noopener" aria-label="X">𝕏</a>
       <button class="icon-button music" id="music-toggle" type="button" aria-label="Play or pause music">♫</button>
+      <button class="bath-mode-button" id="bath-mode" type="button">🛁 Bath Mode</button>
     </div>
   </header>
 
@@ -81,9 +90,12 @@
           <a class="neon-button" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener">
             <span>➤</span> Join Telegram
           </a>
-          <a class="neon-button" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener">
+          <a class="neon-button" href="https://x.com/BabyBathSOL_" target="_blank" rel="noopener">
             <span>𝕏</span> Follow on X
           </a>
+          <button class="neon-button bath-trigger" id="hero-bath-trigger" type="button">
+            <span>🛁</span> Enter Bath Mode
+          </button>
         </div>
       </div>
 
@@ -92,6 +104,19 @@
         <img class="coin-float" src="assets/babybath-coin.png" alt="BabyBath coin emblem">
       </div>
     </section>
+
+    <div class="launch-ticker" aria-hidden="true">
+      <div>
+        <span>🫧 CLEAN CHARTS ONLY</span>
+        <span>🦆 STRONG COMMUNITY</span>
+        <span>🛁 EVERY LEGEND STARTS WITH A BATH</span>
+        <span>🚀 BATH TIME → LAMBO TIME</span>
+        <span>🫧 CLEAN CHARTS ONLY</span>
+        <span>🦆 STRONG COMMUNITY</span>
+        <span>🛁 EVERY LEGEND STARTS WITH A BATH</span>
+        <span>🚀 BATH TIME → LAMBO TIME</span>
+      </div>
+    </div>
 
     <section class="status-strip reveal" aria-label="Project status">
       <article>
@@ -192,6 +217,44 @@
       </div>
     </section>
 
+    <section class="meme-section" id="memes">
+      <div class="section-copy reveal">
+        <p class="eyebrow">BATHROOM GALLERY</p>
+        <h2>Memes that<br><span>make waves.</span></h2>
+      </div>
+      <div class="meme-grid">
+        <figure class="meme-feature reveal">
+          <img src="assets/babybath-hero.png" alt="BabyBath promotional artwork">
+          <figcaption>Every legend starts with a bath.</figcaption>
+        </figure>
+        <figure class="meme-coin-card reveal">
+          <img src="assets/babybath-coin.png" alt="BabyBath coin logo">
+          <figcaption>The official $BATH emblem.</figcaption>
+        </figure>
+        <article class="meme-text-card reveal">
+          <span>🧼</span>
+          <strong>SOAP REMOVES DIRT.</strong>
+          <strong>BUBBLES REMOVE BEARS.</strong>
+          <strong>$BATH CREATES LEGENDS.</strong>
+          <button type="button" class="small-neon meme-pop">Pop a bubble</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="launch-center reveal">
+      <div>
+        <p class="eyebrow">LAUNCH COMMAND CENTER</p>
+        <h2>Everything verified.<br><span>Nothing hidden.</span></h2>
+        <p>At launch, this section becomes the single verified source for the contract, pool, chart and explorer links.</p>
+      </div>
+      <div class="launch-grid">
+        <article><span>CA</span><strong>Coming soon</strong><small>Published simultaneously everywhere</small></article>
+        <article><span>DEX</span><strong>Raydium</strong><small>Initial BATH/SOL liquidity</small></article>
+        <article><span>CHART</span><strong>DexScreener</strong><small>Live after the first pool trade</small></article>
+        <article><span>VERIFY</span><strong>Solscan</strong><small>Supply and authority checks</small></article>
+      </div>
+    </section>
+
     <section class="faq-section" id="faq">
       <div class="section-copy reveal">
         <p class="eyebrow">FAQ</p>
@@ -226,10 +289,24 @@
       </div>
       <div class="community-links">
         <a class="neon-button primary" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener">➤ Telegram</a>
-        <a class="neon-button" href="https://x.com/BabyBathSOL" target="_blank" rel="noopener">𝕏 @BabyBathSOL</a>
+        <a class="neon-button" href="https://x.com/BabyBathSOL_" target="_blank" rel="noopener">𝕏 @BabyBathSOL_</a>
       </div>
     </section>
   </main>
+
+  <div class="bath-modal" id="bath-modal" aria-hidden="true">
+    <div class="bath-modal-card" role="dialog" aria-modal="true" aria-labelledby="bath-modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
+      <img src="assets/babybath-coin.png" alt="">
+      <p class="eyebrow">WELCOME TO THE BATH</p>
+      <h2 id="bath-modal-title">You're early.</h2>
+      <p>The token is not live yet. Follow the official accounts and verify the contract here before trading.</p>
+      <div>
+        <a class="neon-button primary" href="https://t.me/BabyBathSOL" target="_blank" rel="noopener">Join Telegram</a>
+        <a class="neon-button" href="https://x.com/BabyBathSOL_" target="_blank" rel="noopener">Follow X</a>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-logo"><img src="assets/babybath-coin.png" alt=""><strong>BabyBath $BATH</strong></div>
@@ -238,7 +315,7 @@
   </footer>
 
   <audio id="site-audio" loop preload="none">
-    <source src="assets/audio/que-fue.mp3" type="audio/mpeg">
+    <source src="assets/audio/Lamine%20Yamal%20Funny%20Meme%20Song!%F0%9F%8E%AD%F0%9F%A4%A3%20-%20Hahhaaa%20Jawad%20(128k).mp3" type="audio/mpeg">
   </audio>
   <script src="script.js"></script>
 </body>

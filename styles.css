@@ -170,3 +170,99 @@ footer p{line-height:1.55;margin:0}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+
+
+/* === Launch polish === */
+.site-loader{
+  position:fixed;inset:0;z-index:150;display:grid;place-content:center;justify-items:center;gap:18px;
+  background:radial-gradient(circle at center,#3b0005,#050000 58%);transition:opacity .55s ease,visibility .55s ease
+}
+.site-loader.hidden{opacity:0;visibility:hidden}
+.site-loader img{width:150px;height:150px;border-radius:50%;animation:loaderPulse 1.5s ease-in-out infinite;box-shadow:0 0 35px rgba(255,0,0,.65)}
+.site-loader strong{font-family:Permanent Marker,cursive;letter-spacing:.08em}
+.loader-bar{width:260px;height:8px;border:1px solid #f22;border-radius:99px;overflow:hidden;background:#080000}
+.loader-bar i{display:block;width:35%;height:100%;background:#f20d1b;box-shadow:0 0 16px #f00;animation:loaderMove 1.2s ease-in-out infinite}
+@keyframes loaderPulse{50%{transform:scale(1.06) rotate(2deg)}}
+@keyframes loaderMove{0%{transform:translateX(-110%)}100%{transform:translateX(390%)}}
+
+.bath-mode-button{
+  border:1px solid #f33;background:#240004;color:white;border-radius:999px;padding:9px 14px;
+  font-size:.73rem;font-weight:900;cursor:pointer;white-space:nowrap;box-shadow:0 0 12px rgba(255,0,0,.2)
+}
+.bath-mode-button:hover,.bath-mode-button.active{background:#f20d1b;box-shadow:var(--glow)}
+
+.launch-ticker{width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;border-block:1px solid #f22;background:#e20b16;padding:13px 0}
+.launch-ticker>div{display:flex;width:max-content;gap:46px;animation:tickerScroll 25s linear infinite;font-weight:900;color:white}
+.launch-ticker span{white-space:nowrap}
+@keyframes tickerScroll{to{transform:translateX(-50%)}}
+
+.cursor-bubble{
+  position:fixed;width:var(--bubble-size);height:var(--bubble-size);z-index:140;pointer-events:none;border-radius:50%;
+  border:1px solid rgba(255,255,255,.75);
+  background:radial-gradient(circle at 30% 25%,white,rgba(110,190,255,.16) 30%,rgba(255,0,60,.24) 70%);
+  box-shadow:0 0 12px rgba(255,40,75,.45);animation:cursorBubble 1.15s ease-out forwards
+}
+@keyframes cursorBubble{
+  0%{opacity:.9;transform:translate(-50%,-50%) scale(.25)}
+  100%{opacity:0;transform:translate(calc(-50% + var(--drift)),calc(-50% - 80px)) scale(1.2)}
+}
+.pop-burst{position:fixed;z-index:145;pointer-events:none;font-size:1.8rem;animation:popBurst .65s ease-out forwards}
+@keyframes popBurst{0%{transform:translate(-50%,-50%) scale(.4);opacity:1}100%{transform:translate(-50%,-50%) scale(2);opacity:0}}
+
+body.bath-mode-on .bubble-layer span{animation-duration:calc(var(--d) * .55);filter:saturate(1.5)}
+body.bath-mode-on{background:radial-gradient(circle at 70% 12%,rgba(255,0,20,.48),transparent 36%),linear-gradient(180deg,#050000,#170002 50%,#030000)}
+body.bath-mode-on .hero-scene{animation:tubShake .45s ease}
+@keyframes tubShake{20%{transform:translateX(-7px) rotate(-.5deg)}40%{transform:translateX(7px) rotate(.5deg)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+
+.toast{
+  position:fixed;z-index:160;left:50%;bottom:30px;transform:translate(-50%,30px);opacity:0;pointer-events:none;
+  border:1px solid #f33;background:#150002;color:#fff;padding:13px 20px;border-radius:999px;font-weight:900;box-shadow:var(--glow);
+  transition:.3s ease
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.meme-section{padding:85px 5px;border-top:1px solid rgba(255,30,30,.25)}
+.meme-grid{display:grid;grid-template-columns:1.45fr .7fr .85fr;gap:17px;margin-top:38px}
+.meme-grid figure,.meme-text-card{
+  margin:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#090000;box-shadow:inset 0 0 30px rgba(255,0,0,.045)
+}
+.meme-grid img{display:block;width:100%;height:100%;object-fit:cover}
+.meme-feature{min-height:430px;position:relative}.meme-feature img{position:absolute;inset:0}
+.meme-grid figcaption{position:absolute;left:16px;bottom:15px;background:rgba(0,0,0,.78);border:1px solid #f22;border-radius:8px;padding:9px 12px;font-weight:900}
+.meme-coin-card{position:relative;min-height:430px;padding:22px}.meme-coin-card img{object-fit:contain}
+.meme-text-card{min-height:430px;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:15px}
+.meme-text-card>span{font-size:4rem}.meme-text-card strong{font-family:Permanent Marker,cursive;font-size:1.2rem;line-height:1.25}
+
+.launch-center{
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;align-items:center;margin:10px 0 85px;padding:42px;
+  border:1px solid #f22;border-radius:16px;background:radial-gradient(circle at 12% 30%,rgba(255,0,0,.2),transparent 35%),#070000;
+  box-shadow:var(--glow)
+}
+.launch-center h2{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(2.8rem,5vw,5.3rem);line-height:.95;margin:0}
+.launch-center h2 span{color:#e3131e;text-shadow:3px 3px 0 #5c0005}.launch-center p{color:#c9bebe;line-height:1.6}
+.launch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.launch-grid article{border:1px solid rgba(255,50,50,.5);background:#0d0101;border-radius:10px;padding:19px;display:flex;flex-direction:column;gap:5px}
+.launch-grid span{color:#ff3b44;font-size:.7rem;font-weight:900;letter-spacing:.1em}.launch-grid strong{font-size:1.2rem}.launch-grid small{color:#9f9292}
+
+.bath-modal{
+  position:fixed;inset:0;z-index:170;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.78);
+  backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:.25s
+}
+.bath-modal.open{opacity:1;visibility:visible}
+.bath-modal-card{
+  width:min(620px,100%);position:relative;text-align:center;border:1px solid #f22;border-radius:20px;padding:36px;
+  background:radial-gradient(circle at 50% 20%,rgba(255,0,0,.24),transparent 34%),#080000;box-shadow:0 0 55px rgba(255,0,0,.42)
+}
+.bath-modal-card img{width:160px;height:160px;border-radius:50%;box-shadow:var(--glow)}
+.bath-modal-card h2{font-family:Anton,sans-serif;text-transform:uppercase;font-size:3.2rem;margin:8px 0}
+.bath-modal-card p:not(.eyebrow){color:#c9bebe;line-height:1.6}.bath-modal-card>div{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.modal-close{position:absolute;right:15px;top:12px;border:0;background:none;color:white;font-size:2rem;cursor:pointer}
+
+@media(max-width:1120px){
+  .meme-grid{grid-template-columns:1fr 1fr}.meme-text-card{grid-column:1/-1;min-height:300px}
+  .launch-center{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .bath-mode-button{display:none}.meme-grid{grid-template-columns:1fr}.meme-text-card{grid-column:auto}
+  .meme-feature,.meme-coin-card,.meme-text-card{min-height:330px}.launch-center{padding:28px 20px}.launch-grid{grid-template-columns:1fr}
+}
